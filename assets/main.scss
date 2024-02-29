@@ -1,0 +1,10 @@
+body {
+  background-color: #171717;
+  color: white;
+}
+
+@layer {
+  .max-w {
+    @apply max-w-5xl;
+  }
+}
