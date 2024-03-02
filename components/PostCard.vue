@@ -13,7 +13,9 @@ defineProps({
   date: {
     default: "Jan 9, 2024",
   },
-  image: {},
+  image: {
+    default: "https://placehold.co/1280x720",
+  },
   author: {},
   link: {},
 });
