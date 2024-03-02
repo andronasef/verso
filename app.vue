@@ -8,5 +8,6 @@ import "@/assets/main.scss";
     <div class="max-w-5xl mx-auto py-16 flex flex-col gap-16">
       <NuxtPage />
     </div>
+    <Footer />
   </div>
 </template>
