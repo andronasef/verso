@@ -13,7 +13,7 @@ defineProps({
 <template>
   <Transition name="fade">
     <div
-      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 flex items-center justify-center px-8"
+      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 z-50 flex items-center justify-center px-8"
       v-if="isSearchVisible"
     >
       <Button
