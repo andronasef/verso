@@ -10,7 +10,7 @@ withDefaults(defineProps<Props>(), {
 });
 
 const divider = tv({
-  base: "self-center bg-white-25 rounded-full",
+  base: "bg-white-25 rounded-full",
   variants: {
     type: {
       horizontal: "h-px",
