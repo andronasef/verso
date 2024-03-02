@@ -13,7 +13,24 @@
   idx.extensions = [
     # "vscodevim.vim"
   ];
-  # preview configuration, identical to monospace.json
-  idx.previews = {
-  };
+idx.previews = {
+  enable = true;
+  previews = [
+    {
+      command = [
+        "npm"
+        "run"
+        "dev"
+        "--"
+        "--port"
+        "$PORT"
+        "--host"
+        "0.0.0.0"
+        "--disable-host-check"
+      ];
+      id = "web";
+      manager = "web";
+    }
+  ];
+};
 }
