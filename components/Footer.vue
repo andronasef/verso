@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col sm:flex-row justify-between items-center px-8 py-10 border-t-white-10 border-t-2 gap-5"
+    class="flex flex-col sm:flex-row justify-between items-center px-8 py-10 sm:py-6 border-t-white-10 border-t-2 gap-5"
   >
     <NuxtLink class="flex gap-3 items-center" to="/">
       <img src="/logo.svg" alt="" />
