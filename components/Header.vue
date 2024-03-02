@@ -32,7 +32,7 @@ function showSearch() {
   >
     <NuxtLink class="flex gap-3 items-center" to="/">
       <img src="/logo.svg" alt="" />
-      <img src="/logo-name.svg" alt="" class="" />
+      <img src="/logo-name.svg" alt="" class="hidden sm:flex" />
     </NuxtLink>
     <!-- Menu Actions -->
     <div class="flex gap-3 sm:gap-5 items-center">
