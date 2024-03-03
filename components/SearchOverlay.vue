@@ -13,13 +13,13 @@ defineProps({
 <template>
   <Transition name="fade">
     <div
-      class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 z-50 flex items-center justify-center px-8"
+      class="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-white-5/95 bg-opacity-95 px-8"
       v-if="isSearchVisible"
     >
       <Button
         :action="hideSearch"
         variant="secondary"
-        class="!p-2 text-xl absolute top-10 right-10 sm:top-16 sm:right-16"
+        class="absolute right-10 top-10 !p-2 text-xl sm:right-16 sm:top-16"
       >
         <Icon name="flowbite:close-solid" />
       </Button>

@@ -21,17 +21,19 @@ const { author, posts } = {
 </script>
 
 <template>
-  <div class="flex flex-col gap-3 items-start">
-    <img :src="author.image" class="w-24 h-24 rounded-full" alt="" />
-    <div class="font-bold text-xl">Written by {{ author.name }}</div>
+  <!-- Author Card -->
+  <div class="flex flex-col items-start gap-3">
+    <img :src="author.image" class="h-24 w-24 rounded-full" alt="" />
+    <div class="text-xl font-bold">Written by {{ author.name }}</div>
     <p class="text-white-75">{{ author.description }}</p>
   </div>
-  <div class="flex flex-col gap-6">
+  <!-- Posts -->
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
     <PostCard v-for="i in 6" />
   </div>
-
+  <!-- Pagination -->
   <div
-    class="flex justify-center items-stretch gap-2 [&>*]:border-white-25 [&>*]:rounded"
+    class="flex items-stretch justify-center gap-2 [&>*]:rounded [&>*]:border-white-25"
   >
     <Button variant="secondary"
       ><Icon

@@ -24,19 +24,19 @@ defineProps({
 <template>
   <NuxtLink :to="link">
     <div
-      class="flex flex-col gap-2 sm:items-center sm:flex-row-reverse border-2 border-white-10 rounded-lg p-4"
+      class="flex flex-col gap-2 rounded-lg border-2 border-white-10 p-4 sm:items-start"
     >
       <img
         :src="image"
         alt=""
         srcset=""
-        class="aspect-video max-w-96 sm:w-1/2 rounded overflow-hidden"
+        class="aspect-video w-full overflow-hidden rounded"
       />
       <div class="flex flex-col gap-2">
-        <h3 class="text-xl sm:text-2xl font-bold">
+        <h3 class="text-xl font-bold sm:text-2xl">
           {{ title }}
         </h3>
-        <p class="text-white-75 line-clamp-2">{{ description }}</p>
+        <p class="line-clamp-2 text-white-75">{{ description }}</p>
         <div class="text-white-75">{{ date }}</div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const { isProfileMenuVisible } = toRefs(props);
 const profileRef = ref(null);
 const { closeProfileMenu } = toRefs(props);
 onClickOutside(profileRef, (e) =>
-  isProfileMenuVisible.value ? closeProfileMenu.value() : null
+  isProfileMenuVisible.value ? closeProfileMenu.value() : null,
 );
 </script>
 
@@ -25,13 +25,13 @@ onClickOutside(profileRef, (e) =>
     <!-- Avatar -->
     <div
       @click="toggleAvatarMenu"
-      class="w-8 h-8 bg-red-400 rounded-full hover:cursor-pointer"
+      class="h-8 w-8 rounded-full bg-red-400 hover:cursor-pointer"
     ></div>
     <!-- Profile Avatar Menu -->
     <Transition name="fade">
       <div
         v-if="isProfileMenuVisible"
-        class="flex flex-col gap-4 absolute top-10 right-0 bg-[#212121] w-48 px-4 py-6 rounded z-50"
+        class="absolute right-0 top-10 z-50 flex w-48 flex-col gap-4 rounded bg-white-10 px-4 py-6"
       >
         <div class="flex flex-col gap-3 [&>*]:text-xl [&>Button>div]:text-lg">
           <Button align="left">
