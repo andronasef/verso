@@ -3,10 +3,14 @@ import "@/assets/main.scss";
 </script>
 
 <template>
-  <div>
+  <div
+    class="flex min-h-screen flex-col selection:bg-primary-500 selection:text-white-100"
+  >
     <Header />
-    <div class="max-w-5xl mx-auto p-8 py-12 sm:p-16 flex flex-col gap-16">
-      <NuxtPage />
+    <div class="m-auto w-full max-w-screen-xl">
+      <div class="flex h-full flex-grow flex-col gap-16 p-8 py-12 sm:p-16">
+        <NuxtPage />
+      </div>
     </div>
     <Footer />
   </div>

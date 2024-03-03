@@ -7,7 +7,7 @@
       <div class="text-2xl font-bold">Top Authors</div>
       <Button variant="secondary" size="sm">More</Button>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
       <AuthorCard name="Andrew Nasef" v-for="i in 6" />
     </div>
   </div>
@@ -17,7 +17,7 @@
       <div class="text-2xl font-bold">Top Posts</div>
       <Button variant="secondary" size="sm">More</Button>
     </div>
-    <div class="flex flex-col gap-10">
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
       <PostCard
         v-for="i in 6"
         title="Lorem ipsum dolor sit amet"
