@@ -7,4 +7,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: "~/tailwind.config.ts",
   },
+  routeRules: {
+    "/posts/new": {
+      ssr: false,
+    },
+  },
 });
