@@ -5,7 +5,8 @@ interface Props {
   variant?: "normal" | "primary" | "secondary" | "icon" | undefined;
   size?: "sm" | "md" | "lg" | undefined;
   align: "left" | "center" | "right" | undefined;
-  action: Function;
+  action: VoidFunction;
+  to: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -13,10 +14,11 @@ const props = withDefaults(defineProps<Props>(), {
   size: "md",
   align: "center",
   action: () => {},
+  to: "",
 });
 
 const button = tv({
-  base: "font-medium text-white rounded-full hover:opacity-90 active:opacity-85 flex items-center gap-3 justify-center transition-all",
+  base: "font-medium text-white rounded-full hover:opacity-90 active:opacity-85 flex items-center gap-3 justify-center transition-all select-none",
   variants: {
     variant: {
       normal: "",
@@ -27,7 +29,7 @@ const button = tv({
     size: {
       sm: "text-sm",
       md: "text-base",
-      lg: "px-4 py-3 text-lg",
+      lg: "px-4 py-3 text-base",
     },
     align: {
       left: "justify-start",
@@ -54,7 +56,10 @@ const button = tv({
 </script>
 
 <template>
-  <button @click="action" :class="button({ variant, size, align })">
+  <button
+    @click="async () => (to ? await navigateTo(to) : action())"
+    :class="button({ variant, size, align })"
+  >
     <slot></slot>
   </button>
 </template>
