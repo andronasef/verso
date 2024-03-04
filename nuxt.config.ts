@@ -7,6 +7,11 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: "~/tailwind.config.ts",
   },
+  vite: {
+    optimizeDeps: {
+      include: ["@editorjs/editorjs"],
+    },
+  },
   routeRules: {
     "/posts/new": {
       ssr: false,
