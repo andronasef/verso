@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col sm:flex-row justify-between items-center px-8 py-10 sm:py-6 border-t-white-10 border-t-2 gap-5"
+    class="flex flex-col items-center justify-between gap-5 border-t-2 border-t-white-10 px-8 py-10 sm:flex-row sm:py-6"
   >
-    <NuxtLink class="flex gap-3 items-center" to="/">
+    <NuxtLink class="flex select-none items-center gap-3" to="/">
       <img src="/logo.svg" alt="" />
       <img src="/logo-name.svg" alt="" class="" />
     </NuxtLink>

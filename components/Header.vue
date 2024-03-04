@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const isLogged = ref(true);
+const isLogged = ref(false);
 const isSearchVisible = ref(false);
 const isProfileMenuVisible = ref(false);
 
@@ -28,19 +28,19 @@ function showSearch() {
 
 <template>
   <header
-    class="flex justify-between items-center px-8 h-20 border-b-white-10 border-b-2"
+    class="flex h-20 items-center justify-between border-b-2 border-b-white-10 px-8"
   >
-    <NuxtLink class="flex gap-3 items-center" to="/">
+    <NuxtLink class="flex select-none items-center gap-3" to="/">
       <img src="/logo.svg" alt="" />
       <img src="/logo-name.svg" alt="" class="hidden sm:flex" />
     </NuxtLink>
     <!-- Menu Actions -->
-    <div class="flex gap-3 sm:gap-5 items-center">
-      <div class="flex gap-2 sm:gap-4 items-center text-xl">
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="flex items-center gap-2 text-xl sm:gap-4">
         <Button variant="icon" :action="showSearch">
           <Icon name="streamline:magnifying-glass" />
         </Button>
-        <Button v-show="isLogged" variant="icon">
+        <Button to="/posts/new" v-show="isLogged" variant="icon">
           <Icon name="streamline:chat-bubble-square-write" />
         </Button>
       </div>
@@ -51,7 +51,7 @@ function showSearch() {
         :toggleAvatarMenu="toggleAvatarMenu"
         :closeProfileMenu="closeProfileMenu"
       />
-      <Button variant="primary" v-else>Get Started</Button>
+      <Button variant="primary" v-else to="/getin">Get Started</Button>
     </div>
   </header>
 
