@@ -161,6 +161,10 @@ h7 {
   background-color: theme("colors.white.10");
 }
 
+.ce-inline-tool--active {
+  background-color: theme("colors.white.25");
+}
+
 .cdx-search-field,
 .ce-popover-item:hover:not(.ce-popover-item--no-hover),
 .ce-inline-toolbar__dropdown:hover,
