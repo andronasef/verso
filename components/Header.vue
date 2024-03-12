@@ -40,7 +40,7 @@ function showSearch() {
         <Button variant="icon" :action="showSearch">
           <Icon name="streamline:magnifying-glass" />
         </Button>
-        <Button to="/posts/new" v-show="isLogged" variant="icon">
+        <Button to="/posts/edit" v-show="isLogged" variant="icon">
           <Icon name="streamline:chat-bubble-square-write" />
         </Button>
       </div>
