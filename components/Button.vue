@@ -57,7 +57,12 @@ const button = tv({
 
 <template>
   <button
-    @click="async () => (to ? await navigateTo(to) : action())"
+    @click="
+      async () => {
+        action ? action() : null;
+        to ? await navigateTo(to) : null;
+      }
+    "
     :class="button({ variant, size, align })"
   >
     <slot></slot>
