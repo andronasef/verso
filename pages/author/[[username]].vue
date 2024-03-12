@@ -29,7 +29,7 @@ const { author, posts } = {
   </div>
   <!-- Posts -->
   <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-    <PostCard v-for="i in 6" />
+    <PostCard v-for="i in 6" to="/posts/post-slug" />
   </div>
   <!-- Pagination -->
   <Pagination />

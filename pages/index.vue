@@ -8,7 +8,7 @@
       <Button variant="secondary" size="sm">More</Button>
     </div>
     <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-      <AuthorCard name="Andrew Nasef" v-for="i in 6" />
+      <AuthorCard name="Andrew Nasef" v-for="i in 6" to="/author/author-slug" />
     </div>
   </div>
   <!-- Top Authors -->
@@ -23,6 +23,7 @@
         title="Lorem ipsum dolor sit amet"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
         image="https://placehold.co/1280x720"
+        to="/posts/post-slug"
       />
     </div>
   </div>

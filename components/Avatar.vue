@@ -1,15 +1,11 @@
 <script setup lang="ts">
-const props = defineProps({
-  isProfileMenuVisible: { type: Boolean, required: true },
-  closeProfileMenu: {
-    type: Function,
-    required: true,
-  },
-  toggleAvatarMenu: {
-    type: Function,
-    required: true,
-  },
-});
+interface Props {
+  isProfileMenuVisible: boolean;
+  closeProfileMenu: VoidFunction;
+  toggleAvatarMenu: VoidFunction;
+}
+
+const props = withDefaults(defineProps<Props>(), {});
 
 const { isProfileMenuVisible } = toRefs(props);
 
@@ -34,21 +30,27 @@ onClickOutside(profileRef, (e) =>
         class="absolute right-0 top-10 z-50 flex w-48 flex-col gap-4 rounded bg-white-10 px-4 py-6"
       >
         <div class="flex flex-col gap-3 [&>*]:text-xl [&>Button>div]:text-lg">
-          <Button align="left">
+          <Button
+            align="left"
+            to="/author/author-slug"
+            :action="toggleAvatarMenu"
+          >
             <Icon name="material-symbols:account-circle" />
             <div>Profile</div>
           </Button>
-          <Button align="left">
+          <Button align="left" to="/myposts" :action="toggleAvatarMenu">
             <Icon name="material-symbols:article-rounded" />
             <div>My Posts</div>
           </Button>
-          <Button align="left">
+          <Button align="left" to="/mysettings" :action="toggleAvatarMenu">
             <Icon name="streamline:cog-solid" />
             <div>Settings</div>
           </Button>
         </div>
         <Divider type="horizontal" />
-        <Button align="left" class="font-bold">Log out</Button>
+        <Button align="left" class="font-bold" :action="toggleAvatarMenu"
+          >Log out</Button
+        >
       </div>
     </Transition>
   </div>
