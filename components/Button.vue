@@ -4,9 +4,9 @@ import { tv } from "tailwind-variants";
 interface Props {
   variant?: "normal" | "primary" | "secondary" | "icon" | undefined;
   size?: "sm" | "md" | "lg" | undefined;
-  align: "left" | "center" | "right" | undefined;
-  action: VoidFunction;
-  to: string;
+  align?: "left" | "center" | "right" | undefined;
+  action?: VoidFunction;
+  to?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -42,7 +42,7 @@ const button = tv({
       size: ["sm", "md"],
       class: "px-3 py-1",
     },
-    { variant: "icon", size: ["sm", "md", "lg"], class: "p-3" },
+    { variant: "icon", size: ["sm", "md", "lg"], class: "!p-3 !aspect-square" },
     {
       variant: ["icon", "normal"],
       class: "hover:bg-white-100 hover:bg-opacity-5",
